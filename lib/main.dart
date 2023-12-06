@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           color: Colors.pink,
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           titleLarge: TextStyle(
             color: Colors.tealAccent,
             fontSize: 32,
@@ -134,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (index < _photos.length) {
           final Photo photo = _photos[index];
           final String limitedDescription =
-          photo.description.length > 50 ? '${photo.description.substring(0, 50)}...' : photo.description;
+              photo.description.length > 50 ? '${photo.description.substring(0, 50)}...' : photo.description;
 
           return GestureDetector(
             onTap: () {
